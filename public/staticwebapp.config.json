@@ -5,12 +5,17 @@
             "*.{css,scss,js,png,gif,ico,jpg,svg}"
         ]
     }, 
-    "routes" : [
+    "routes": [
         {
-        "route": "/.auth/login/aad"}, 
-    {
-        "route": "/api/shopwindow/*",
-        "allowedRoles": ["authenticated"]
-    }
-]
+          "route": "/*",
+          "allowedRoles": ["authenticated"]
+        }
+      ],
+      "responseOverrides": {
+        "401": {
+          "statusCode": 302,
+          "redirect": "/.auth/login/aad"
+        }
+      }
+
 }
