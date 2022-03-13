@@ -1,10 +1,13 @@
 <template>
-  <h1 class="text-center text-2xl text-red-400">{{message}}</h1>
+
+  <router-view></router-view>
+
 </template>
 
 <script>
 export default {
   name: "App",
+
   data() {
     return {
       message: "",
