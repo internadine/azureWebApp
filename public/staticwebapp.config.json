@@ -7,9 +7,7 @@
     }, 
     "routes" : [
         {
-        "route": "/.auth/login/aad", 
-        "statusCode": "404"
-    }, 
+        "route": "/.auth/login/aad"}, 
     {
         "route": "/api/shopwindow/*",
         "allowedRoles": ["authenticated"]
